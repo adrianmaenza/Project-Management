@@ -35,10 +35,11 @@
             </div>
         </div>
         <script>
-        $(document).ready(function () {
-            $.get('http://prm.bhakosi.com/queries.php', {query: 'questions'},function (data) {
+        $.get('http://prm.bhakosi.com/queries.php', {query: 'questions'},function (data) {
                 $('#quesions').html(data);
             });
+        $(document).ready(function () {
+            
         });
         </script>
     </body>
