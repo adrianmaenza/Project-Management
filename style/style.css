@@ -1,0 +1,92 @@
+*, body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+body{
+    background-color: #f1f1f1;
+/*    min-width: 960px;*/
+}
+header{
+    background-color: #29b6aa;
+    width: 100%;
+    height: 40px;
+}
+.container{
+    max-width: 1366px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+aside.notifications{
+    width: 90%;
+    background-color: #fff;
+/*    min-height: 400px;*/
+    margin: 1.5% auto;
+    padding: 1%;
+    border-radius: 5px;
+}
+aside.notifications p{
+    margin-left: 20px;
+    line-height: 30px;
+    font-weight: bold;
+}
+aside.notifications > h2, div.content > h2{
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    line-height: 30px;
+}
+div.content{
+    width: 90%;
+    min-height: 500px;
+    margin: 1.5% auto;
+    padding: 1%;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.shadow{
+   box-shadow:  0 0 3px rgba(0,0,0,0.3);
+}
+.left{
+    float: left
+}
+div.main{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+article{
+    width: 90%;
+    padding: 0 2.5%;
+    margin-top: 15px;
+}
+article.questions{
+    height: 120px;
+    overflow-y: scroll;
+}
+article p{
+    line-height: 25px;
+}
+
+article ul{
+    display: block;
+}
+article ul li{
+    line-height: 40px;
+    background: -webkit-linear-gradient(top, #fafafa, #fff, #fafafa);
+    display: block;
+    padding-left: 10px;
+    cursor: pointer;
+}
+article ul li:hover{
+    background: -webkit-linear-gradient(top, #f1f1f1, #fafafa, #f1f1f1);
+}
+div.main > article{
+    border-right: 1px solid rgba(0,0,0,0.1);
+}
+.answers{
+    display: none;
+}

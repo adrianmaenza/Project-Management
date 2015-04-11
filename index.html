@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>Project Management Discussion</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <script src="js/jquery-1.11.2.min.js"></script>
+</head>
+<html>
+    <body>
+        <header></header>
+        <div class="container">
+            <aside class="notifications shadow">
+                <h2>Notifications</h2>
+                <p>No Notifications.</p>
+            </aside>
+            <div class="content shadow">
+                <h2>Project Management forum</h2>
+                <div class="main">
+                <article class="questions">
+                   <ul>
+                        <li id="1">Welcome Message.</li>
+                        <li id="2">Click here.</li>
+                        <li id="3">Questions will appear here.</li>
+                    </ul>
+                </article>
+                <article>
+                    <p class="answers" id="a1">
+                        Welcome to the Project management forum. The aim of this forum is to have a platform
+                        where we can discuss questions in preparation for the upcoming exams
+                    </p>
+                    <p class="answers" id ="a2">By clicking on the link, you display content corresponding to the question 
+                    or query.
+                    </p>
+                    <p class="answers" id="a3">And the responses will appear here.</p>
+                </article>
+                </div>
+            </div>
+        </div>
+        <script>
+        $(document).ready(function () {
+            $('#1').click(function () {
+                $('.answers').hide();
+                $('#a1').slideDown();
+            });
+            
+            $('#2').click(function () {
+                $('.answers').hide();
+                $('#a2').slideDown();
+            });
+            
+            $('#3').click(function () {
+                $('.answers').hide();
+                $('#a3').slideDown();
+            });
+        });
+        </script>
+    </body>
+</html>
