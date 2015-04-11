@@ -18,9 +18,7 @@
                 <div class="main">
                 <article class="questions">
                    <ul>
-                        <li id="1">Welcome Message.</li>
-                        <li id="2">Click here.</li>
-                        <li id="3">Questions will appear here.</li>
+                        
                     </ul>
                 </article>
                 <article>
@@ -38,22 +36,8 @@
         </div>
         <script>
         $(document).ready(function () {
-            $('#1').click(function () {
-                $('.answers').hide();
-                $.get('http://prm.bhakosi.com/questions.php',{query: 'questions'},function(data) {
-                    $('#a1').html(data);
-                });
-                $('#a1').slideDown();
-            });
-            
-            $('#2').click(function () {
-                $('.answers').hide();
-                $('#a2').slideDown();
-            });
-            
-            $('#3').click(function () {
-                $('.answers').hide();
-                $('#a3').slideDown();
+            $.get('http://prm.bhakosi.com/queries.php', {query: 'questions'},function (data) {
+                $('#quesions').html(data);
             });
         });
         </script>
