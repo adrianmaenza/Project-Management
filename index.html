@@ -38,12 +38,11 @@
         </div>
         <script>
         $(document).ready(function () {
-            var query = "questions";
-            $.get('http://prm.bkakosi.com/questions.php', {query: query}, function(data) {
-                alert(data);
-            })
             $('#1').click(function () {
                 $('.answers').hide();
+                $.get('http://prm.bhakosi.com/questions.php',{query: 'questions'},function(data) {
+                    $('#a1').html(data);
+                });
                 $('#a1').slideDown();
             });
             
