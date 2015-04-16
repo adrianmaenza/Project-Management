@@ -88,5 +88,6 @@ div.main > article{
     border-right: 1px solid rgba(0,0,0,0.1);
 }
 .answers{
-    display: none;
+/*    display: none;*/
+    transition: all linear 0.4s;
 }

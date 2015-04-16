@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <head>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
     <title>Project Management Discussion</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
     <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/services.js"></script>
 </head>
 <html>
     <body>
@@ -21,26 +23,11 @@
                         
                     </ul>
                 </article>
-                <article>
-                    <p class="answers" id="a1">
-                        Welcome to the Project management forum. The aim of this forum is to have a platform
-                        where we can discuss questions in preparation for the upcoming exams
-                    </p>
-                    <p class="answers" id ="a2">By clicking on the link, you display content corresponding to the question 
-                    or query.
-                    </p>
-                    <p class="answers" id="a3">And the responses will appear here.</p>
+                <article id="responses">
+                    
                 </article>
                 </div>
             </div>
         </div>
-        <script>
-        $.get('http://prm.bhakosi.com/queries.php', {query: 'questions'},function (data) {
-                $('#quesions').html(data);
-            });
-        $(document).ready(function () {
-            
-        });
-        </script>
     </body>
 </html>
