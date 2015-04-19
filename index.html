@@ -12,15 +12,34 @@
         <header></header>
         <div class="container">
             <aside class="notifications shadow">
-                <h2>Notifications</h2>
-                <p>No Notifications.</p>
+                <h2>Post Question</h2>
+                <form action="#" method="get" id="pq">
+                    <input type="text" id="name" placeholder="Please enter your name">
+                    <textarea name="question" id="new_question" placeholder="Post a new question..."></textarea>
+                    
+                    <p class="c-hack"><input type="submit" value="Post" class="btn"></p>
+                </form>
+                
+                <script>
+                    $('#pq').on('submit', function (e) {
+                        var question = $('#new_question').val(),
+                            name = $('#name').val();
+                        e.preventDefault();
+                        $('#responses').html('<img src="imgs/load.gif" id="load">');
+                        $.get('http://prm.bhakosi.com/queries.php', {action: 'post_question', question: question, user: name}, function (data) {
+                            if(data){
+                                $('#responses').html(data);
+                            }
+                        });
+                    });
+                </script>
             </aside>
             <div class="content shadow">
                 <h2>Project Management forum</h2>
                 <div class="main">
                 <article class="questions">
                    <ul id="questions">
-                        
+                        <img src="imgs/load.gif" id="load">
                     </ul>
                 </article>
                 <article id="responses">

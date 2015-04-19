@@ -91,3 +91,35 @@ div.main > article{
 /*    display: none;*/
     transition: all linear 0.4s;
 }
+#new_question{
+    width: 90%;
+    height: 80px;
+    border-radius: 5px;
+    resize: vertical;
+    margin: 10px 2.5% 10px 2.5%;
+    padding: 2.5%;
+}
+.btn{
+    padding: 7.5px 15px;
+    width: 40%;
+}
+.c-hack{
+    text-align: center;
+}
+#load{
+    margin: 0 auto;
+    display: block;
+    height: 50px;
+}
+.success{
+    color: green;
+}
+
+.fail{
+    color: red;
+}
+#name{
+    margin: 10px 2.5% 10px 2.5%;
+    width: 90%;
+    padding: 1% 2.5%;
+}
