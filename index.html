@@ -4,36 +4,52 @@
     <title>Project Management Discussion</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-    <script src="js/jquery-1.11.2.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/services.js"></script>
 </head>
 <html>
     <body>
-        <header></header>
-        <div class="container">
-            <aside class="notifications shadow">
+        
+        <div data-role="page" id="pq-page"> 
+        <div data-role="header">
+                <h2>Project Management forum</h2>
+                <a href="#">Notifications</a>
+                <a href="#q-page" data-transition="slidedown">Post Question</a>
+            </div>
+            <div data-role="content">
+                <div class="main">
+                <article class="questions">
+                   <ul data-role="listview" data-filter="true" id="questions">
+                        <li><img src="imgs/load.gif" id="load"></li>
+                    </ul>
+                    <div id="atq"></div>
+                </article>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div data-role="page" id="q-page">
+        <div data-role="header"><h1>Project Management forum</h1>
+            <a href="#">Notifications</a>
+            <a href="#pq-page" data-transition="slideup">View Questions</a>
+        </div>
+        
+            <div data-role="content">
                 <h2>Post Question</h2>
+                <div class="ui-feild-contain">
                 <form action="#" method="get" id="pq">
                     <input type="text" id="name" placeholder="Please enter your name">
                     <textarea name="question" id="new_question" placeholder="Post a new question..."></textarea>
                     
                     <p class="c-hack"><input type="submit" value="Post" class="btn"></p>
                 </form>
-                
-
-            </aside>
-            <div class="content shadow">
-                <h2>Project Management forum</h2>
-                <div class="main">
-                <article class="questions">
-                   <ul id="questions">
-                        <img src="imgs/load.gif" id="load">
-                    </ul>
-                </article>
+                </div>
                 <article id="responses">
                     
                 </article>
-                </div>
             </div>
         </div>
     </body>
