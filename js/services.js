@@ -3,7 +3,6 @@ $(document).ready(function () {
             $.get('http://prm.bhakosi.com/queries.php', {query: 'questions'}, function (data) {
             $('#questions').html(data);
             $('#questions').listview('refresh');
-                var status = 'Complete';
         });
     }
     
@@ -46,9 +45,12 @@ $(document).ready(function () {
         });
     });//this function posts an answer
     
-    if (status == 'complete'){
-    setInterval(function (){
+        setInterval(function (){
+            get_questions();
+        }, 10000);
+    
+    $('#refresh').click(function (e) {
+        e.preventDefault();
         get_questions();
-    }, 10000);
-    }
+    });
 });
