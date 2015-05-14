@@ -21,10 +21,11 @@ $(document).ready(function () {
     
     $('#pq').on('submit', function (e) {
         var question = $('#new_question').val(),
+            qid = $('#qid').val();
             name = $('#name').val();
         e.preventDefault();
         $('#responses').html('<img src="imgs/load.gif" id="load">');
-        $.get('http://prm.bhakosi.com/queries.php', {action: 'post_question', question: question, user: name}, function (data) {
+        $.get('http://prm.bhakosi.com/queries.php', {action: 'post_question', question: question, user: name,qid: qid}, function (data) {
             if(data){
                 $('#responses').html(data);
                 $('#pq').trigger("reset");
@@ -32,11 +33,12 @@ $(document).ready(function () {
         });
     });//this function posts a quetion
     
-    $('#pa').on('submit', function (e) {
+    $('body').on('submit', '#answer_form', function (e) {
         var answer = $('#new_answer').val(),
+            qid = $('#qid').val();
             name = $('#a_name').val();
         e.preventDefault();
-        $('#responses').html('<img src="imgs/load.gif" id="load">');
+        $('#feedback').html('<img src="imgs/load.gif" id="load">');
         $.get('http://prm.bhakosi.com/queries.php', {action: 'post_answer', answer: answer, user: name, qid: qid}, function (data) {
             if(data){
                 $('#feedback').html(data);
